@@ -5,8 +5,6 @@ import Card from './components/card';
 function App() {
   // Get user's username from backend and pass it into greeting in header
 
-  const name = "Documents";
-  const iconLink = "/images/file-document.svg"
   return (
     <div className="container">
       <div className="header">
@@ -21,7 +19,7 @@ function App() {
       <Sidebar />
       <div className="content">
         <div className="cards-container">
-          <Card cardName={name} cardIcon={iconLink} />
+          <Card cardName="Documents" cardIcon="/images/file-document.svg" />
         </div>
       </div>
     </div>

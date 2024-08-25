@@ -4,8 +4,15 @@
     grid-column: 1;
     display: grid;
     grid-template: 150px 1fr / 1fr;
-    place-items: center;
+    /* place-items: center; */
     background-color: var(--orange);
+}
+
+.logo-section {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+    grid-row: 1;
 }
 
 .logo-container {
@@ -15,7 +22,6 @@
     display: grid;
     grid-template: 1fr / 1fr;
     place-items: center;
-    grid-row: 1;
     background-color: var(--sky);
 }
 

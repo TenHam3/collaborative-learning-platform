@@ -4,8 +4,10 @@ export default function Sidebar() {
     return (
     <div className="sidebar">
         {/* Make logo a button that returns to home page in future */}
-        <div className="logo-container"> 
-            <img src="/images/paperclip.svg" alt="Logo" className="contained-img" />
+        <div className="logo-section">
+            <div className="logo-container">
+                <img src="/images/paperclip.svg" alt="Logo" className="contained-img" />
+            </div>
         </div>
         <nav className="navbar">
             <ul className="nav-links">
