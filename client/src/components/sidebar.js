@@ -1,26 +1,26 @@
-import '../sidebar.css';
+import styles from '../sidebar.module.css';
 
 export default function Sidebar() {
     return (
-    <div className="sidebar">
+    <div className={styles.sidebar}>
         {/* Make logo a button that returns to home page in future */}
-        <div className="logo-section">
-            <div className="logo-container">
-                <img src="/images/paperclip.svg" alt="Logo" className="contained-img" />
+        <div className={styles["logo-section"]}>
+            <div className={styles["logo-container"]}>
+                <img src="/images/paperclip.svg" alt="Logo" className={styles["contained-img"]} />
             </div>
         </div>
-        <nav className="navbar">
-            <ul className="nav-links">
-                <li className="nav-item">
-                    <div className="nav-link-container">
-                        <img className="icon" alt="Settings" src="/images/cog.svg" />
-                        <a className="nav-link">Settings</a>
+        <nav className={styles.navbar}>
+            <ul className={styles["nav-links"]}>
+                <li className={styles["nav-item"]}>
+                    <div className={styles["nav-link-container"]}>
+                        <img className={styles.icon} alt="Settings" src="/images/cog.svg" />
+                        <a className={styles["nav-link"]}>Settings</a>
                     </div>
                 </li>
-                <li className="nav-item">
-                    <div className="nav-link-container">
-                        <img className="icon" alt="Account" src="/images/account-circle.svg" />
-                        <a className="nav-link">Account</a>
+                <li className={styles["nav-item"]}>
+                    <div className={styles["nav-link-container"]}>
+                        <img className={styles.icon} alt="Account" src="/images/account-circle.svg" />
+                        <a className={styles["nav-link"]}>Account</a>
                     </div>
                 </li>
             </ul>

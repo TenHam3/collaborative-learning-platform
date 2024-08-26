@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react';
 import styles from '../auth.module.css';
+import '../globals.css';
+import { Link } from 'react-router-dom';
 
 export default function Signup() {
+
+  const handleForm = e => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const formDataObj = Object.fromEntries(formData.entries());
+    console.log(formDataObj);
+  } 
+
   return (
     <div className={styles.container}>
       <div className={styles["side-section"]}>
@@ -12,19 +23,22 @@ export default function Signup() {
         </div>
       </div>
       <div className={styles["form-section"]}>
-        <form>
-          {/* Need username, email, and password */}
-          <div className={styles["field-container"]}>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" />
-          </div>
-          <div className={styles["field-container"]}>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required />
-          </div>
-          <div className={styles["field-container"]}>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" />
+        <form onSubmit={handleForm}>
+          <div className={styles["form-container"]}>
+            <div className={styles["field-container"]}>
+              <label htmlFor="email">Email</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div className={styles["field-container"]}>
+              <label htmlFor="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div className={styles["field-container"]}>
+              <label htmlFor="username">Username</label>
+              <input type="text" id="username" name="username" />
+            </div>
+            <button className={styles["submit-btn"]} type="submit">Submit</button>
+            <p>Already have an account? <Link to="/login">Log in</Link></p>
           </div>
         </form>
       </div>

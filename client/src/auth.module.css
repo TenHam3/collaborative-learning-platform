@@ -40,5 +40,34 @@ div.banner > h1 {
 
 .form-section {
     grid-column: 2;
-    background-color: green;
+    background-color: black;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+}
+
+form {
+    width: 400px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.form-container {
+    margin: 15px;
+}
+
+.field-container {
+    display: flex;
+    gap: 25px;
+}
+
+.submit-btn {
+    border: none;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: var(--sky);
+    cursor: pointer;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../App.module.css';
+import '../globals.css';
 import Sidebar from '../components/sidebar';
 import Card from '../components/card';
 
