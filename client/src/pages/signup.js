@@ -25,20 +25,23 @@ export default function Signup() {
       <div className={styles["form-section"]}>
         <form onSubmit={handleForm}>
           <div className={styles["form-container"]}>
-            <div className={styles["field-container"]}>
+            <h3 className={styles["form-title"]}>Sign up</h3>
+            <div>
               <label htmlFor="email">Email</label>
               <input type="email" id="email" name="email" />
             </div>
-            <div className={styles["field-container"]}>
+            <div>
               <label htmlFor="password">Password</label>
               <input type="password" id="password" name="password" required />
             </div>
-            <div className={styles["field-container"]}>
+            <div>
               <label htmlFor="username">Username</label>
               <input type="text" id="username" name="username" />
             </div>
             <button className={styles["submit-btn"]} type="submit">Submit</button>
-            <p>Already have an account? <Link to="/login">Log in</Link></p>
+            <div className={styles["auth-redirect"]}>
+              <p>Already have an account? <Link to="/login">Log in</Link></p>
+            </div>
           </div>
         </form>
       </div>
