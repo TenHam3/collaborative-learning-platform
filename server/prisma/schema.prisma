@@ -19,11 +19,18 @@ model User {
   email     String     @unique
   password  String
   documents Document[]
+  Session   Session?
 }
 
 model Document {
   id    String @id @default(uuid())
-  name  String
+  title  String
   body  Json? // Stores quill data of entire document
   Users User[]
+}
+
+model Session {
+  session_id String @id @default(uuid())
+  User       User   @relation(fields: [user_id], references: [id])
+  user_id    Int @unique
 }

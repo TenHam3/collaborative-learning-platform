@@ -1,11 +1,11 @@
 import React from 'react'
-import '../App.css';
+import styles from '../App.module.css';
 
 export default function Card(props) {
   return (
-    <div className="card">
-        <img src={props.cardIcon} alt="" className="cardIcon" />
-        <h1 className="cardName" >{props.cardName}</h1>
+    <div className={styles.card}>
+        <img src={props.cardIcon} alt="" className={styles.cardIcon} />
+        <h1 className={styles.cardName} >{props.cardName}</h1>
     </div>
   );
 }
